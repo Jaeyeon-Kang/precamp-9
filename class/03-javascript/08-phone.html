@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <title>포커스 맞추기</title>
+    <script>
+        function changePhone1(){
+            const phone1 = document.getElementById("phone1").value
+            if(phone1.length === 3){
+                document.getElementById("phone2").focus() 
+                // focus는 커서 맞추라는 뜻임. if뒤에 쓰인 phone1dms const phone1임. getElementById의 phone2는 아래 id=phone2 말하는거임.
+                // if 뒤에 한 줄만 나오면 {} 안 묶어도 됨
+            }
+        }
+        
+        function changePhone2(){
+            const phone2= document.getElementById("phone2").value
+            if(phone2.length === 4) document.getElementById("phone3").focus()
+        }
+    </script>
+</head>
+<body>
+    <input id="phone1" type="text" size="3" maxlength="3" oninput="changePhone1()"/>
+     - <input id="phone2" type="text" size="4" maxlength="4" oninput="changePhone2()"/> - 
+     <input id="phone3" type="text" size="4" maxlength="4"/>
+</body>
+</html>

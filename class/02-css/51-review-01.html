@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    
+    <title>박스모델</title>
+    <style>
+        .qqq{
+            width: 200px;
+            height: 200px;
+            background-color: blue;
+            border: 10px solid black;
+            margin: 30px;
+            padding: 30px;
+            box-sizing: border-box;
+            /* border-sizing: border-box는 정해진 사이즈 내에서 padding값을 줄 때 사용  */
+        }
+        .item{
+             width: 200px;
+             height: 200px;
+             background-color: red;
+             border: 10px solid black;
+             margin: 30px;
+             padding: 30px;
+             box-sizing: border-box;   
+
+        }
+        .wrapper{
+            width: 1000px;
+            height: 1000px;
+            background-color: skyblue;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+        }
+
+
+    </style>
+
+
+</head>
+<body>
+    <div class="qqq">박스0</div>
+    <div class="wrapper">
+    <div class="item">박스1</div>
+    <div class="item">박스2</div> 
+    <div class="item">박스3</div>    
+      </div>
+    <div class="qqq">박스4</div>
+
+
+    
+</body>
+</html>

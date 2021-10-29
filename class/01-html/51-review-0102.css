@@ -1,0 +1,16 @@
+<style>
+input {
+    background-color: yellow;
+}
+ /* 이건 왜 적용 안되지? */
+
+
+.qqq {
+    background-color: skyblue;
+}
+
+#zzz{
+    background-color: maroon;
+}
+
+</style>

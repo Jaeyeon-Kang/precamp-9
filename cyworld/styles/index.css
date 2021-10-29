@@ -1,0 +1,45 @@
+.background {
+    width: 1024px;
+    height: 600px;
+    background-image: url('../images/background.png');
+    padding-left: 20px;
+    padding-top: 20px;
+}
+
+.outerbox {
+    width: 808px;
+    height: 544px;
+    background-image: url('../images/outerbox.png');
+}
+
+.wrapper {
+    display: flex;
+    padding-left: 32px;
+    padding-top: 32px;
+
+}
+
+
+.wrapper__left {
+    width: 208px;
+    height: 472px;
+    background-color: white;
+    margin-top: 44px;
+    margin-left: 6px;
+    margin-bottom: 1px;
+ 
+}
+
+.wrapper__right {
+    width: 524px;
+    height: 472px;
+    background-color: greenyellow;
+}
+
+.imagebox{
+    width: 148px;
+    height: 144px;
+    display: flex;
+			flex-direction: column;
+			justify-content: space-around;
+}

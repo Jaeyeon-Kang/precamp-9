@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <script>
+
+
+        let isActive=false // 타이머 스위치 만드려고 하는거고 false는 꺼졌다는 뜻으로 우리끼리 룰을 정한거임. '스위치 변수'라고 한다고 함..
+            const aaa = () => {
+                //만약에 rrr이 꺼져있다면 그 때 실행해 줘.
+                if(isActive === false) {
+                    const token = String(Math.floor(Math.random()*1000000)).padStart(6, "0")
+            
+                    document.getElementById("qqq").innerText=token
+
+                    isActive=true 
+                  
+                  
+                    let time = 180
+
+                        setInterval(function (){
+
+                            const min = String(Math.floor(time/60)).padStart(2,"0") //padStart쓰려면 String사용해서 문자로 바꿔줘야 함.
+                            const sec = String(time%60).padStart(2,"0")
+                            if (time>= 0) {
+                            document.getElementById("timer").innerText= min + ":" + sec // console로 보여줄땐 console.log, html로 보여줄땐 document.getElementByID("").innerText= 로 써야함
+                            time = time-1
+                            }
+
+                        },1000)
+            
+                
+                
+                }
+            }
+
+    </script>
+
+
+
+
+</head>
+<body>
+    <span id="qqq">000000</span> 
+    <button onclick="aaa()"> 인증번호 전송</button>    
+    
+    <div id="timer">03:00 </div>
+  
+</body>
+</html>

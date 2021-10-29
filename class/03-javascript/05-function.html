@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Document</title>
+    <script>
+        function aaa(){
+            
+            
+            const token = String(Math.floor(Math.random()*1000000)).padStart(6, "0")
+            
+            document.getElementById("qqq").innerText=token
+
+
+        } 
+
+
+
+
+    </script>
+
+
+
+
+</head>
+<body>
+    <span id="qqq">000000</span> 
+    <button onclick="aaa()"> 인증번호 전송</button>    
+</body>
+</html>

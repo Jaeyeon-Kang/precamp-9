@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head> 
+    <title>이벤트 감지</title>
+    <script>
+        function qqq(){
+            const email = document.getElementById("email").value
+            const password1 = document.getElementById("password1").value
+            const password2 = document.getElementById("password2").value
+            //모두가 채워져 있다면 버튼의 색을 노란색으로 변경하기
+            if(email !== "" && password1 !=="" && password2 !==""){
+                document.getElementById("mybutton").setAttribute('style', 'background-color:yellow;')
+                document.getElementById("mybutton").removeAttribute("disabled")
+            } /// if(이메일 === "") 이메일이 비어있다면 이라는 뜻 //setAttribute('어떤속성', '어떻게;') -> 어떤 속성을 어떻게 바꾸겠다는 뜻 // remiveAttrivutes는 setattribute한걸 아예 삭제하겠다는 뜻
+            else{document.getElementById("mybutton").setAttribute('style', 'background-color: none;')
+                document.getElementById("mybutton").setAttribute('disabled', "true")}
+        }0
+    </script>
+</head>
+<body>
+    <!-- 이메일, 비밀번호1, 비밀번호2가 다 채워졌을 때 회원가입 창을 노랗게 바꾸려고 함. 회원가입에 style속성 지정하려고 함. -->
+    <input id="email" type="text"  placeholder="이메일을 입력해 주세요!" oninput="qqq()"/> <br/>
+    <input id="password1" type="password" placeholder="비밀번호를 입력해 주세요!" oninput="qqq()"
+    /><br/>
+    <input id="password2" type="password" placeholder="비밀번호를 다시 입력해 주세요!" oninput="qqq()"/><br/>    
+
+    <button id="mybutton" disabled>회원가입</button>
+    
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+   
+    <title>돔(DOM) 조작하기
+    </title>
+    <script>
+        function aaa() {
+            // alert("안녕하세요~~~")
+
+            document.getElementById("qqq").innerText="반갑습니다"
+        
+        }
+
+        function counter(){
+
+           const temp = Number(document.getElementById("count").innerText) * 3 // '0'+ 1
+             document.getElementById("count").innerText = temp
+        }
+
+
+
+    </script>
+</head>
+<body>
+    <div id="qqq">안녕하세요</div>
+    <button onclick="aaa()">클릭하기</button>
+
+    <div id="count">2</div>
+    <button onclick="counter()">숫자 올리기!!!</button>
+</body>
+</html>
